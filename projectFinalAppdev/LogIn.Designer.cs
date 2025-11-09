@@ -54,12 +54,13 @@
             // 
             this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.BtnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExit.ForeColor = System.Drawing.Color.White;
             this.BtnExit.Location = new System.Drawing.Point(890, -1);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(49, 30);
             this.BtnExit.TabIndex = 6;
-            this.BtnExit.Text = "O";
+            this.BtnExit.Text = "X";
             this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
@@ -68,12 +69,13 @@
             // 
             this.BtnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.BtnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMinimize.ForeColor = System.Drawing.Color.White;
             this.BtnMinimize.Location = new System.Drawing.Point(798, -1);
             this.BtnMinimize.Name = "BtnMinimize";
             this.BtnMinimize.Size = new System.Drawing.Size(49, 30);
             this.BtnMinimize.TabIndex = 7;
-            this.BtnMinimize.Text = "O";
+            this.BtnMinimize.Text = "-";
             this.BtnMinimize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnMinimize.UseVisualStyleBackColor = false;
             this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
@@ -82,12 +84,13 @@
             // 
             this.BtnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.BtnMaximize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMaximize.ForeColor = System.Drawing.Color.White;
             this.BtnMaximize.Location = new System.Drawing.Point(844, -1);
             this.BtnMaximize.Name = "BtnMaximize";
             this.BtnMaximize.Size = new System.Drawing.Size(49, 30);
             this.BtnMaximize.TabIndex = 8;
-            this.BtnMaximize.Text = "O";
+            this.BtnMaximize.Text = "☐";
             this.BtnMaximize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnMaximize.UseVisualStyleBackColor = false;
             this.BtnMaximize.Click += new System.EventHandler(this.BtnMaximize_Click);
@@ -110,7 +113,7 @@
             this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.tbUsername.ForeColor = System.Drawing.Color.White;
             this.tbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsername.Location = new System.Drawing.Point(318, 319);
+            this.tbUsername.Location = new System.Drawing.Point(318, 300);
             this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.PlaceholderText = "Username";
@@ -136,7 +139,7 @@
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.tbPassword.ForeColor = System.Drawing.Color.White;
             this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Location = new System.Drawing.Point(318, 377);
+            this.tbPassword.Location = new System.Drawing.Point(318, 358);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PlaceholderText = "Password";
@@ -161,7 +164,7 @@
             this.BtnLogIn.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(48)))));
             this.BtnLogIn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.BtnLogIn.ForeColor = System.Drawing.Color.White;
-            this.BtnLogIn.Location = new System.Drawing.Point(419, 443);
+            this.BtnLogIn.Location = new System.Drawing.Point(419, 424);
             this.BtnLogIn.Name = "BtnLogIn";
             this.BtnLogIn.Size = new System.Drawing.Size(122, 28);
             this.BtnLogIn.TabIndex = 14;
@@ -172,7 +175,7 @@
             // 
             this.pbWhitebackground.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbWhitebackground.BackColor = System.Drawing.Color.White;
-            this.pbWhitebackground.Location = new System.Drawing.Point(273, 275);
+            this.pbWhitebackground.Location = new System.Drawing.Point(273, 256);
             this.pbWhitebackground.Name = "pbWhitebackground";
             this.pbWhitebackground.Size = new System.Drawing.Size(391, 205);
             this.pbWhitebackground.TabIndex = 9;
@@ -230,7 +233,7 @@
             // 
             this.pbGreybackground.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbGreybackground.Image = global::projectFinalAppdev.Properties.Resources.grey;
-            this.pbGreybackground.Location = new System.Drawing.Point(273, 275);
+            this.pbGreybackground.Location = new System.Drawing.Point(273, 256);
             this.pbGreybackground.Name = "pbGreybackground";
             this.pbGreybackground.Size = new System.Drawing.Size(406, 217);
             this.pbGreybackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -241,7 +244,7 @@
             // 
             this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbLogo.Image = global::projectFinalAppdev.Properties.Resources.Designer__1_;
-            this.pbLogo.Location = new System.Drawing.Point(318, 71);
+            this.pbLogo.Location = new System.Drawing.Point(318, 52);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(315, 204);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

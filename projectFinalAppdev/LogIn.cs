@@ -25,7 +25,7 @@ namespace projectFinalAppdev
 
         private void LogIn_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void BtnMinimize_Click(object sender, EventArgs e)
@@ -45,12 +45,6 @@ namespace projectFinalAppdev
                 this.WindowState = FormWindowState.Maximized;
             else
                 this.WindowState = FormWindowState.Normal;
-
-        }
-
-        private void btnLogIn_Click(object sender, EventArgs e)
-        {
-
 
         }
 

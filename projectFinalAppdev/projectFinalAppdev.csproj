@@ -111,5 +111,23 @@
   <ItemGroup>
     <None Include="Resources\column white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student-management-avatar-people-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grade-center-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basic-information-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users-people-team-svgrepo-com-vectormixer-com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\training-center-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quit-svgrepo-com.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
