@@ -29,12 +29,12 @@ namespace projectFinalAppdev
             }
         }
 
-        private void BtnMinimize_Click(object sender, EventArgs e)
+        private void btnMinimize_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void BtnMaximize_Click(object sender, EventArgs e)
+        private void BtnMaximize_Click_1(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
                 this.WindowState = FormWindowState.Maximized;
@@ -42,9 +42,10 @@ namespace projectFinalAppdev
                 this.WindowState = FormWindowState.Normal;
         }
 
-        private void BtnExit_Click(object sender, EventArgs e)
+        private void BtnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+
         }
     }
 }

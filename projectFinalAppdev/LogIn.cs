@@ -17,35 +17,12 @@ namespace projectFinalAppdev
             InitializeComponent();
             this.tbPassword.PlaceholderText = "Password";
             this.tbPassword.UseSystemPasswordChar = true;
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.ControlBox = false;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            
         }
 
         private void LogIn_Load(object sender, EventArgs e)
         {
             
-        }
-
-        private void BtnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-
-        }
-
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void BtnMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
-
         }
 
         private void BtnLogIn_Click_1(object sender, EventArgs e)
@@ -69,6 +46,17 @@ namespace projectFinalAppdev
             {
                 MessageBox.Show("Invalid Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnMinimize_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void BtnExit_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
