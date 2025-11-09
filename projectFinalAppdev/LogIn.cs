@@ -15,13 +15,66 @@ namespace projectFinalAppdev
         public LogIn()
         {
             InitializeComponent();
+            this.tbPassword.PlaceholderText = "Password";
+            this.tbPassword.UseSystemPasswordChar = true;
             this.Text = string.Empty;
             this.ControlBox = false;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         private void LogIn_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void BtnLogIn_Click_1(object sender, EventArgs e)
+        {
+            string username = tbUsername.Text;
+            string password = tbPassword.Text;
+
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Please enter both Username and Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (username == "admin" && password == "123")
+            {
+                MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
