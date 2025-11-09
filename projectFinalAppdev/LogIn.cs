@@ -67,7 +67,7 @@ namespace projectFinalAppdev
             if (username == "admin" && password == "123")
             {
                 MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Dashboard dashboard = new Dashboard();
+                Dash dashboard = new Dash();
                 dashboard.Show();
 
             }

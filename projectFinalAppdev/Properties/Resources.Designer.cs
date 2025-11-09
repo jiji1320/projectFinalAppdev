@@ -63,6 +63,26 @@ namespace projectFinalAppdev.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap align_justify_svgrepo_com__1_ {
+            get {
+                object obj = ResourceManager.GetObject("align-justify-svgrepo-com (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap column_white {
+            get {
+                object obj = ResourceManager.GetObject("column white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap designbar {
             get {
                 object obj = ResourceManager.GetObject("designbar", resourceCulture);

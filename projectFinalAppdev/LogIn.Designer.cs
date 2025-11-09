@@ -28,97 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pbGreybackground = new System.Windows.Forms.PictureBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.BtnExit = new System.Windows.Forms.Button();
             this.BtnMinimize = new System.Windows.Forms.Button();
             this.BtnMaximize = new System.Windows.Forms.Button();
-            this.pbWhitebackground = new System.Windows.Forms.PictureBox();
             this.tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnLogIn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pbWhitebackground = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbGreybackground = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWhitebackground)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGreybackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWhitebackground)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::projectFinalAppdev.Properties.Resources.designbar;
-            this.pictureBox3.Location = new System.Drawing.Point(909, 58);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(17, 692);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pbGreybackground
-            // 
-            this.pbGreybackground.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbGreybackground.Image = global::projectFinalAppdev.Properties.Resources.grey;
-            this.pbGreybackground.Location = new System.Drawing.Point(273, 275);
-            this.pbGreybackground.Name = "pbGreybackground";
-            this.pbGreybackground.Size = new System.Drawing.Size(406, 217);
-            this.pbGreybackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbGreybackground.TabIndex = 1;
-            this.pbGreybackground.TabStop = false;
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbLogo.Image = global::projectFinalAppdev.Properties.Resources.Designer__1_;
-            this.pbLogo.Location = new System.Drawing.Point(318, 71);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(315, 204);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogo.TabIndex = 0;
-            this.pbLogo.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::projectFinalAppdev.Properties.Resources.designbar;
-            this.pictureBox4.Location = new System.Drawing.Point(876, -187);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(17, 692);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox5.Image = global::projectFinalAppdev.Properties.Resources.designbar;
-            this.pictureBox5.Location = new System.Drawing.Point(12, -187);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(17, 692);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox6.Image = global::projectFinalAppdev.Properties.Resources.designbar;
-            this.pictureBox6.Location = new System.Drawing.Point(44, 66);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(17, 692);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
             // 
             // BtnExit
             // 
@@ -161,16 +91,6 @@
             this.BtnMaximize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnMaximize.UseVisualStyleBackColor = false;
             this.BtnMaximize.Click += new System.EventHandler(this.BtnMaximize_Click);
-            // 
-            // pbWhitebackground
-            // 
-            this.pbWhitebackground.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbWhitebackground.BackColor = System.Drawing.Color.White;
-            this.pbWhitebackground.Location = new System.Drawing.Point(273, 275);
-            this.pbWhitebackground.Name = "pbWhitebackground";
-            this.pbWhitebackground.Size = new System.Drawing.Size(391, 205);
-            this.pbWhitebackground.TabIndex = 9;
-            this.pbWhitebackground.TabStop = false;
             // 
             // tbUsername
             // 
@@ -241,12 +161,92 @@
             this.BtnLogIn.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(48)))));
             this.BtnLogIn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.BtnLogIn.ForeColor = System.Drawing.Color.White;
-            this.BtnLogIn.Location = new System.Drawing.Point(419, 438);
+            this.BtnLogIn.Location = new System.Drawing.Point(419, 443);
             this.BtnLogIn.Name = "BtnLogIn";
             this.BtnLogIn.Size = new System.Drawing.Size(122, 28);
             this.BtnLogIn.TabIndex = 14;
             this.BtnLogIn.Text = "LOGIN";
             this.BtnLogIn.Click += new System.EventHandler(this.BtnLogIn_Click_1);
+            // 
+            // pbWhitebackground
+            // 
+            this.pbWhitebackground.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbWhitebackground.BackColor = System.Drawing.Color.White;
+            this.pbWhitebackground.Location = new System.Drawing.Point(273, 275);
+            this.pbWhitebackground.Name = "pbWhitebackground";
+            this.pbWhitebackground.Size = new System.Drawing.Size(391, 205);
+            this.pbWhitebackground.TabIndex = 9;
+            this.pbWhitebackground.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox6.Image = global::projectFinalAppdev.Properties.Resources.designbar;
+            this.pictureBox6.Location = new System.Drawing.Point(44, 66);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(17, 692);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox5.Image = global::projectFinalAppdev.Properties.Resources.designbar;
+            this.pictureBox5.Location = new System.Drawing.Point(12, -187);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(17, 692);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::projectFinalAppdev.Properties.Resources.designbar;
+            this.pictureBox4.Location = new System.Drawing.Point(876, -187);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(17, 692);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::projectFinalAppdev.Properties.Resources.designbar;
+            this.pictureBox3.Location = new System.Drawing.Point(909, 58);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(17, 692);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pbGreybackground
+            // 
+            this.pbGreybackground.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbGreybackground.Image = global::projectFinalAppdev.Properties.Resources.grey;
+            this.pbGreybackground.Location = new System.Drawing.Point(273, 275);
+            this.pbGreybackground.Name = "pbGreybackground";
+            this.pbGreybackground.Size = new System.Drawing.Size(406, 217);
+            this.pbGreybackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbGreybackground.TabIndex = 1;
+            this.pbGreybackground.TabStop = false;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbLogo.Image = global::projectFinalAppdev.Properties.Resources.Designer__1_;
+            this.pbLogo.Location = new System.Drawing.Point(318, 71);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(315, 204);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
             // LogIn
             // 
@@ -272,13 +272,13 @@
             this.Name = "LogIn";
             this.Text = "LogIn";
             this.Load += new System.EventHandler(this.LogIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbWhitebackground)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGreybackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWhitebackground)).EndInit();
             this.ResumeLayout(false);
 
         }
