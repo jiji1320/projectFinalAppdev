@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls.Adapters;
 using System.Windows.Forms;
 
 namespace projectFinalAppdev
@@ -15,14 +16,15 @@ namespace projectFinalAppdev
         public LogIn()
         {
             InitializeComponent();
-            this.tbPassword.PlaceholderText = "Password";
+            tbPassword.PlaceholderText = "Password";
             this.tbPassword.UseSystemPasswordChar = true;
             
         }
 
         private void LogIn_Load(object sender, EventArgs e)
         {
-            
+            Hide();
+
         }
 
         private void BtnLogIn_Click_1(object sender, EventArgs e)
@@ -46,17 +48,18 @@ namespace projectFinalAppdev
             {
                 MessageBox.Show("Invalid Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Hide(); 
         }
-
+       
         private void btnMinimize_Click_1(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-
+            WindowState = FormWindowState.Minimized;
         }
 
         private void BtnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+            
         }
     }
 }

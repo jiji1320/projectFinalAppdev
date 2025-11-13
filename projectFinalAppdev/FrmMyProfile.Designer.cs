@@ -1,6 +1,6 @@
 ﻿namespace projectFinalAppdev
 {
-    partial class Dash
+    partial class FrmMyProfile
     {
         /// <summary>
         /// Required designer variable.
@@ -67,7 +67,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1305, 734);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 2;
             // 
             // BtnExit
             // 
@@ -89,7 +89,7 @@
             this.BtnExit.Size = new System.Drawing.Size(52, 37);
             this.BtnExit.TabIndex = 6;
             this.BtnExit.Text = "X";
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click_1);
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // BtnMaximize
             // 
@@ -111,7 +111,7 @@
             this.BtnMaximize.Size = new System.Drawing.Size(52, 37);
             this.BtnMaximize.TabIndex = 5;
             this.BtnMaximize.Text = "☐";
-            this.BtnMaximize.Click += new System.EventHandler(this.BtnMaximize_Click_1);
+            this.BtnMaximize.Click += new System.EventHandler(this.BtnMaximize_Click);
             // 
             // btnMinimize
             // 
@@ -133,7 +133,7 @@
             this.btnMinimize.Size = new System.Drawing.Size(52, 37);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "−";
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click_1);
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // Titlebar
             // 
@@ -155,9 +155,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(421, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 32);
+            this.label1.Size = new System.Drawing.Size(193, 32);
             this.label1.TabIndex = 4;
-            this.label1.Text = "DASHBOARD";
+            this.label1.Text = "MY PROFILE";
             // 
             // btnSlide
             // 
@@ -320,7 +320,7 @@
             this.btnMyProfile.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyProfile.ForeColor = System.Drawing.Color.White;
             this.btnMyProfile.Image = global::projectFinalAppdev.Properties.Resources.student_management_avatar_people_svgrepo_com;
-            this.btnMyProfile.Location = new System.Drawing.Point(0, 195);
+            this.btnMyProfile.Location = new System.Drawing.Point(3, 195);
             this.btnMyProfile.Name = "btnMyProfile";
             this.btnMyProfile.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(223)))), ((int)(((byte)(207)))));
             this.btnMyProfile.Size = new System.Drawing.Size(255, 64);
@@ -353,16 +353,15 @@
             this.guna2DragControl1.TargetControl = this.Titlebar;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // Dash
+            // FrmMyProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1305, 734);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dash";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dash";
+            this.Name = "FrmMyProfile";
+            this.Text = "FrmMyProfile";
             this.panel2.ResumeLayout(false);
             this.Titlebar.ResumeLayout(false);
             this.Titlebar.PerformLayout();
@@ -374,23 +373,24 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2Button BtnExit;
+        private Guna.UI2.WinForms.Guna2Button BtnMaximize;
+        private Guna.UI2.WinForms.Guna2Button btnMinimize;
+        private System.Windows.Forms.Panel Titlebar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox btnSlide;
         private System.Windows.Forms.Panel MenuVertical;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btnDashboard;
+        private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2Button btnMaterials;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnCustomers;
         private Guna.UI2.WinForms.Guna2Button btnReport;
         private Guna.UI2.WinForms.Guna2Button btnProducts;
         private Guna.UI2.WinForms.Guna2Button btnSalesHistory;
         private Guna.UI2.WinForms.Guna2Button btnMyProfile;
-        private Guna.UI2.WinForms.Guna2Button btnSignOut;
-        private System.Windows.Forms.Panel Titlebar;
-        private System.Windows.Forms.PictureBox btnSlide;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button btnMinimize;
-        private Guna.UI2.WinForms.Guna2Button BtnExit;
-        private Guna.UI2.WinForms.Guna2Button BtnMaximize;
+        private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

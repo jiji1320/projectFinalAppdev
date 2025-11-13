@@ -58,6 +58,37 @@
     <Compile Include="Dash.Designer.cs">
       <DependentUpon>Dash.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormManager.cs" />
+    <Compile Include="FrmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomers.Designer.cs">
+      <DependentUpon>FrmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaterials.Designer.cs">
+      <DependentUpon>FrmMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMyProfile.Designer.cs">
+      <DependentUpon>FrmMyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSalesHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSalesHistory.Designer.cs">
+      <DependentUpon>FrmSalesHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSignOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSignOut.Designer.cs">
+      <DependentUpon>FrmSignOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,8 +97,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProducts.Designer.cs">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dash.resx">
       <DependentUpon>Dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomers.resx">
+      <DependentUpon>FrmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaterials.resx">
+      <DependentUpon>FrmMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMyProfile.resx">
+      <DependentUpon>FrmMyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProducts.resx">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSalesHistory.resx">
+      <DependentUpon>FrmSalesHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSignOut.resx">
+      <DependentUpon>FrmSignOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
@@ -82,6 +143,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

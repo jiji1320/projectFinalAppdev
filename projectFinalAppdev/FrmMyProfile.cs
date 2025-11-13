@@ -1,20 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace projectFinalAppdev
 {
-    public partial class Dash : Form
+    public partial class FrmMyProfile : Form
     {
-        public Dash()
+        public FrmMyProfile()
         {
             InitializeComponent();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            // Keep this form visible; activate or create single Dash instance
+            OpenUniqueForm<Dash>();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BtnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnSlide_Click(object sender, EventArgs e)
@@ -28,38 +46,13 @@ namespace projectFinalAppdev
                 MenuVertical.Width = 200;
             }
         }
-
-        private void btnMinimize_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void BtnMaximize_Click_1(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
-        }
-
-        private void BtnExit_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void OpenUniqueForm<T>() where T : Form, new()
         {
-           
+
             var existing = Application.OpenForms.OfType<T>().FirstOrDefault();
             if (existing != null)
             {
-            
+
                 if (existing.WindowState == FormWindowState.Minimized)
                     existing.WindowState = FormWindowState.Normal;
                 existing.BringToFront();
@@ -67,16 +60,10 @@ namespace projectFinalAppdev
             }
             else
             {
-             
+
                 var form = new T();
                 form.Show();
             }
-        }
-
-        private void btnMyProfile_Click(object sender, EventArgs e)
-        {
-            // Do not Close/Hide this Dash form; show a single instance of profile instead
-            OpenUniqueForm<FrmMyProfile>();
         }
 
         private void btnSalesHistory_Click(object sender, EventArgs e)
@@ -86,7 +73,7 @@ namespace projectFinalAppdev
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<FrmProducts>();
+             OpenUniqueForm<FrmProducts>();
         }
 
         private void btnReport_Click(object sender, EventArgs e)
@@ -107,6 +94,11 @@ namespace projectFinalAppdev
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             OpenUniqueForm<FrmSignOut>();
+        }
+
+        private void btnMyProfile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
