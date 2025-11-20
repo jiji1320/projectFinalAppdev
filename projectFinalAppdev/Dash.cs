@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace projectFinalAppdev
 {
+    
     public partial class Dash : Form
     {
         public Dash()
@@ -31,7 +32,7 @@ namespace projectFinalAppdev
 
         private void btnMinimize_Click_1(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         private void BtnMaximize_Click_1(object sender, EventArgs e)
@@ -53,13 +54,29 @@ namespace projectFinalAppdev
 
         }
 
-        private void OpenUniqueForm<T>() where T : Form, new()
+        public void OpenUniqueForm<T>() where T : Form, new()
         {
-           
-            var existing = Application.OpenForms.OfType<T>().FirstOrDefault();
+
+
+            var openForms = Application.OpenForms.Cast<Form>().ToList();
+
+            T existing = null;
+
+            foreach (var f in openForms)
+            {
+
+                if (f is Dash || f is LogIn)
+                    continue;
+
+               
+                if (f is T)
+                    existing = (T)f;
+                else
+                    f.Hide();
+            }
+
             if (existing != null)
             {
-            
                 if (existing.WindowState == FormWindowState.Minimized)
                     existing.WindowState = FormWindowState.Normal;
                 existing.BringToFront();
@@ -67,16 +84,18 @@ namespace projectFinalAppdev
             }
             else
             {
-             
                 var form = new T();
                 form.Show();
             }
         }
+        
 
         private void btnMyProfile_Click(object sender, EventArgs e)
         {
-            // Do not Close/Hide this Dash form; show a single instance of profile instead
-            OpenUniqueForm<FrmMyProfile>();
+            var profileForm = new FrmMyProfile();
+            profileForm.FormClosed += (s, args) => this.Show();
+            profileForm.Show();
+            this.Hide(); // keep instance for later Show()
         }
 
         private void btnSalesHistory_Click(object sender, EventArgs e)
@@ -91,7 +110,7 @@ namespace projectFinalAppdev
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<Report>();
+            OpenUniqueForm<FrmReport>();
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)

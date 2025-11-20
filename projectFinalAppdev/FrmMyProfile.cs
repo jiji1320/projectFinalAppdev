@@ -49,10 +49,25 @@ namespace projectFinalAppdev
         private void OpenUniqueForm<T>() where T : Form, new()
         {
 
-            var existing = Application.OpenForms.OfType<T>().FirstOrDefault();
-            if (existing != null)
+            var openForms = Application.OpenForms.Cast<Form>().ToList();
+
+            T existing = null;
+
+            foreach (var f in openForms)
             {
 
+                if (f is FrmMyProfile || f is Dash)
+                    continue;
+
+
+                if (f is T)
+                    existing = (T)f;
+                else
+                    f.Hide();
+            }
+
+            if (existing != null)
+            {
                 if (existing.WindowState == FormWindowState.Minimized)
                     existing.WindowState = FormWindowState.Normal;
                 existing.BringToFront();
@@ -60,7 +75,6 @@ namespace projectFinalAppdev
             }
             else
             {
-
                 var form = new T();
                 form.Show();
             }
@@ -78,7 +92,7 @@ namespace projectFinalAppdev
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<Report>();
+            OpenUniqueForm<FrmReport>();
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)

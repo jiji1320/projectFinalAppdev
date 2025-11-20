@@ -19,10 +19,25 @@ namespace projectFinalAppdev
         private void OpenUniqueForm<T>() where T : Form, new()
         {
 
-            var existing = Application.OpenForms.OfType<T>().FirstOrDefault();
-            if (existing != null)
+            var openForms = Application.OpenForms.Cast<Form>().ToList();
+
+            T existing = null;
+
+            foreach (var f in openForms)
             {
 
+                if (f is FrmSignOut || f is FrmMaterials)
+                    continue;
+
+
+                if (f is T)
+                    existing = (T)f;
+                else
+                    f.Hide();
+            }
+
+            if (existing != null)
+            {
                 if (existing.WindowState == FormWindowState.Minimized)
                     existing.WindowState = FormWindowState.Normal;
                 existing.BringToFront();
@@ -30,7 +45,6 @@ namespace projectFinalAppdev
             }
             else
             {
-
                 var form = new T();
                 form.Show();
             }
@@ -57,7 +71,7 @@ namespace projectFinalAppdev
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<Report>();
+            OpenUniqueForm<FrmReport>();
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
@@ -68,6 +82,36 @@ namespace projectFinalAppdev
         private void btnMaterials_Click(object sender, EventArgs e)
         {
             OpenUniqueForm<FrmMaterials>();
+        }
+
+        private void btnSlide_Click(object sender, EventArgs e)
+        {
+            if (MenuVertical.Width == 200)
+            {
+                MenuVertical.Width = 35;
+            }
+            else
+            {
+                MenuVertical.Width = 200;
+            }
+        }
+
+        private void BtnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

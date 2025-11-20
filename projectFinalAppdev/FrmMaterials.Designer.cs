@@ -89,6 +89,7 @@
             this.BtnExit.Size = new System.Drawing.Size(52, 37);
             this.BtnExit.TabIndex = 6;
             this.BtnExit.Text = "X";
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // BtnMaximize
             // 
@@ -110,6 +111,7 @@
             this.BtnMaximize.Size = new System.Drawing.Size(52, 37);
             this.BtnMaximize.TabIndex = 5;
             this.BtnMaximize.Text = "☐";
+            this.BtnMaximize.Click += new System.EventHandler(this.BtnMaximize_Click);
             // 
             // btnMinimize
             // 
@@ -131,6 +133,7 @@
             this.btnMinimize.Size = new System.Drawing.Size(52, 37);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Text = "−";
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // Titlebar
             // 
@@ -166,6 +169,7 @@
             this.btnSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSlide.TabIndex = 2;
             this.btnSlide.TabStop = false;
+            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
             // 
             // MenuVertical
             // 

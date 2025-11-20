@@ -12,11 +12,26 @@ namespace projectFinalAppdev
         }
         private void OpenUniqueForm<T>() where T : Form, new()
         {
+            
+            var openForms = Application.OpenForms.Cast<Form>().ToList();
 
-            var existing = Application.OpenForms.OfType<T>().FirstOrDefault();
+            T existing = null;
+
+            foreach (var f in openForms)
+            {
+             
+                if (f is FrmCustomers || f is FrmReport)
+                    continue;
+
+            
+                if (f is T)
+                    existing = (T)f;
+                else
+                    f.Hide();
+            }
+
             if (existing != null)
             {
-
                 if (existing.WindowState == FormWindowState.Minimized)
                     existing.WindowState = FormWindowState.Normal;
                 existing.BringToFront();
@@ -24,14 +39,13 @@ namespace projectFinalAppdev
             }
             else
             {
-
                 var form = new T();
                 form.Show();
             }
         }
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            // Keep this form visible; activate or create single Dash instance
+        
             OpenUniqueForm<Dash>();
         }
 
@@ -52,7 +66,7 @@ namespace projectFinalAppdev
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<Report>();
+            OpenUniqueForm<FrmReport>();
         }
 
         private void btnMaterials_Click(object sender, EventArgs e)
@@ -63,6 +77,36 @@ namespace projectFinalAppdev
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             OpenUniqueForm<FrmSignOut>();
+        }
+
+        private void btnSlide_Click(object sender, EventArgs e)
+        {
+            if (MenuVertical.Width == 200)
+            {
+                MenuVertical.Width = 35;
+            }
+            else
+            {
+                MenuVertical.Width = 200;
+            }
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void BtnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
