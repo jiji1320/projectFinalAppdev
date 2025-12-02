@@ -77,12 +77,12 @@ namespace projectFinalAppdev
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-        OpenUniqueForm<FrmCustomers>();
+
         }
 
         private void btnMaterials_Click(object sender, EventArgs e)
         {
-        OpenUniqueForm<FrmMaterials>();
+
         }
 
         private void btnSlide_Click(object sender, EventArgs e)

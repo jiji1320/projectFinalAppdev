@@ -1,22 +1,31 @@
-﻿using System;
+﻿using projectFinalAppdev.UserControl;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace projectFinalAppdev
 {
-    
+   
     public partial class Dash : Form
     {
         public Dash()
         {
             InitializeComponent();
         }
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:" +
+            "\\Users\\FranciscoNathan\\Documents\\LoginsDB.mdf;Integrated " +
+            "Security=True;Connect Timeout=30;Encrypt=True";
+        
+
+        private DataGridView dgvData;
 
         private void btnSlide_Click(object sender, EventArgs e)
         {
@@ -51,7 +60,12 @@ namespace projectFinalAppdev
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-
+            // Load Dashboard UserControl
+            DisplayPanel.Controls.Clear();
+            Instance.dashboard.Dock = DockStyle.Fill;
+            Instance.dashboard.TopLevel = false;
+            Instance.dashboard.Show();
+            DisplayPanel.Controls.Add(Instance.dashboard);
         }
 
         public void OpenUniqueForm<T>() where T : Form, new()
@@ -115,17 +129,75 @@ namespace projectFinalAppdev
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<FrmCustomers>();
+
         }
 
         private void btnMaterials_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<FrmMaterials>();
+ 
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             OpenUniqueForm<FrmSignOut>();
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DatatoViewLoad_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string selectQuery = "SELECT EmployeeID, FirstName, LastName, Department FROM Employees";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    // 1. Use a SqlDataAdapter to execute the query and fill a DataTable
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(selectQuery, conn))
+                    {
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable); // Fill the DataTable with results
+
+                        // 2. Set the DataTable as the DataSource for the DataGridView
+                        dgvData.DataSource = dataTable; 
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DisplayPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Dash_Load(object sender, EventArgs e)
+        {
+            Instance.dashboard = new Dashboard();
+            DisplayPanel.Controls.Clear();
         }
     }
 }

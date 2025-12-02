@@ -361,6 +361,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMyProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMyProfile";
             this.panel2.ResumeLayout(false);
             this.Titlebar.ResumeLayout(false);

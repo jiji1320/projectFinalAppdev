@@ -16,72 +16,39 @@ namespace projectFinalAppdev
         {
             InitializeComponent();
         }
-        private void OpenUniqueForm<T>() where T : Form, new()
-        {
-
-            var openForms = Application.OpenForms.Cast<Form>().ToList();
-
-            T existing = null;
-
-            foreach (var f in openForms)
-            {
-
-                if (f is FrmSignOut || f is FrmMaterials)
-                    continue;
-
-
-                if (f is T)
-                    existing = (T)f;
-                else
-                    f.Hide();
-            }
-
-            if (existing != null)
-            {
-                if (existing.WindowState == FormWindowState.Minimized)
-                    existing.WindowState = FormWindowState.Normal;
-                existing.BringToFront();
-                existing.Activate();
-            }
-            else
-            {
-                var form = new T();
-                form.Show();
-            }
-        }
+      
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<Dash>();
+
         }
 
         private void btnMyProfile_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<FrmMyProfile>();
+   
         }
 
         private void btnSalesHistory_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<FrmSalesHistory>();
+
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<FrmProducts>();
+     
         }
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<FrmReport>();
+          
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<FrmCustomers>();
         }
 
         private void btnMaterials_Click(object sender, EventArgs e)
         {
-            OpenUniqueForm<FrmMaterials>();
+
         }
 
         private void btnSlide_Click(object sender, EventArgs e)

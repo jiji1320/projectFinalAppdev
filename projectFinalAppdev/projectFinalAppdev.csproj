@@ -41,6 +41,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,18 +60,6 @@
       <DependentUpon>Dash.cs</DependentUpon>
     </Compile>
     <Compile Include="FormManager.cs" />
-    <Compile Include="FrmCustomers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCustomers.Designer.cs">
-      <DependentUpon>FrmCustomers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMaterials.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMaterials.Designer.cs">
-      <DependentUpon>FrmMaterials.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmMyProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +84,12 @@
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="My Profile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Profile.Designer.cs">
+      <DependentUpon>My Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FrmProducts.cs">
@@ -109,14 +104,15 @@
     <Compile Include="FrmReport.Designer.cs">
       <DependentUpon>FrmReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Instance.cs" />
     <EmbeddedResource Include="Dash.resx">
       <DependentUpon>Dash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCustomers.resx">
-      <DependentUpon>FrmCustomers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMaterials.resx">
-      <DependentUpon>FrmMaterials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMyProfile.resx">
       <DependentUpon>FrmMyProfile.cs</DependentUpon>
@@ -145,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="FrmReport.resx">
       <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
